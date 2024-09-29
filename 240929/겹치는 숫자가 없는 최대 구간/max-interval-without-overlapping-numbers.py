@@ -1,6 +1,6 @@
 n = int(input())
 arr = [0] + list(map(int, input().split()))
-cnt_arr = [0] * (n + 1)
+cnt_arr = [0] * (100001)
 
 j, ans = 0, 0
 
