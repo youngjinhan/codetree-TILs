@@ -5,7 +5,7 @@ B = [0] + list(map(int, input().split()))
 def is_subsequence():
     i = 1
     for j in range(1, m+1):
-        if i <= n and A[i] != B[i]:
+        if i <= n and A[i] != B[j]:
             i += 1
         
         if i == n+1:
