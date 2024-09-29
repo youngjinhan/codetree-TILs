@@ -28,7 +28,7 @@ public class Main {
             ans = Math.min(ans, j - i + 1);
             pSum -= arr[i];
         }
-
+        if (ans == INT_MAX) ans = -1;
         System.out.print(ans);
     }
 }
