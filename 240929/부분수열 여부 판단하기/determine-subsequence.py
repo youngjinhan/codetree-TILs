@@ -10,8 +10,8 @@ def is_subsequence():
         
         if i == n+1:
             return False
-        
-        i += 1
+        else:
+            i += 1
     
     return True
 
