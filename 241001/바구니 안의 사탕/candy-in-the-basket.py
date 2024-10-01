@@ -7,14 +7,15 @@ for i in range(n):
     pos[p] += cnt
 
 p_sum = 0
-for i in range(1, 2*k + 2):
-    p_sum += pos[i]
-
-ans = p_sum
-
-for i in range(2, p - (2*k) + 1):
-    p_sum = p_sum - pos[i - 1] + pos[i + 2*k]
+ans = 0
+j = 0
+for i in range(1, max_p - 2*k + 1):
+    while j+1 <= max_p - 2*k and j+1 <= i + 2*k:
+        p_sum += pos[j+1]
+        j += 1 
     ans = max(ans, p_sum)
+    p_sum -= pos[i]
+
 
 print(ans)
 
