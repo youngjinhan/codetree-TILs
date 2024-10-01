@@ -9,7 +9,7 @@ for i in range(n):
 p_sum = 0
 ans = 0
 j = 0
-for i in range(1, max_p - 2*k + 1):
+for i in range(1, 1000001):
     while j+1 <= max_p - 2*k and j+1 <= i + 2*k:
         p_sum += pos[j+1]
         j += 1 
