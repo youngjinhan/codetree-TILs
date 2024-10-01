@@ -9,8 +9,8 @@ for i in range(n):
 p_sum = 0
 ans = 0
 j = 0
-for i in range(0, 1000001):
-    while j <= 1000000 and j <= i + 2*k:
+for i in range(0, max_p):
+    while j <= max_p and j <= i + 2*k:
         p_sum += pos[j]
         j += 1 
     ans = max(ans, p_sum)
