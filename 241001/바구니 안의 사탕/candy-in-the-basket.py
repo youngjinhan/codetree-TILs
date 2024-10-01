@@ -12,7 +12,7 @@ for i in range(1, 2*k + 2):
 
 ans = p_sum
 
-for i in range(2, p - (2*k+1) + 2):
+for i in range(2, p - (2*k) + 1):
     p_sum = p_sum - pos[i - 1] + pos[i + 2*k]
     ans = max(ans, p_sum)
 
