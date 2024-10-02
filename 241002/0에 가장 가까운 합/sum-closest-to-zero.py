@@ -10,5 +10,5 @@ for i in range (1, n+1):
         j -= 1
 
     if ans == 0:
-        exit 
+        break 
 print(ans)
