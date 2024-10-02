@@ -5,7 +5,7 @@ j = n
 ans = 10**10
 for i in range (1, n+1):
     p_sum = arr[i]
-    while j > i and abs(p_sum + arr[j]) < ans:
+    while j > i and abs(p_sum + arr[j]) <= ans:
         ans = min(ans, abs(p_sum + arr[j]))
         j -= 1
 
