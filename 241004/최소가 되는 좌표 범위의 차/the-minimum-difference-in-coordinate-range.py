@@ -18,7 +18,6 @@
 
 
 import sys
-import sys
 from collections import deque
 
 def find_min_window(N, D, points):
