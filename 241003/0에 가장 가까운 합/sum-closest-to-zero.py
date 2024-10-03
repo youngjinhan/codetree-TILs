@@ -7,8 +7,8 @@ for i in range (1, n+1):
     if j > i:
         ans = min(ans, abs(arr[i] + arr[j]))
     
-    while i < j-1 and arr[i] + arr[j-1] > 0:
-        ans = min(ans, abs(arr[i] + arr[j-1]))
+    while i < j-1 and arr[i] + arr[j] > 0:
         j -= 1
+        ans = min(ans, abs(arr[i] + arr[j]))
 
 print(ans)
