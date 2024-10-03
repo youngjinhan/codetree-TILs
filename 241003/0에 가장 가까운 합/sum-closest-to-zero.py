@@ -1,21 +1,26 @@
+import sys
+
+INT_MAX = sys.maxsize
+
+# 변수 선언 및 입력:
 n = int(input())
-arr = [0] + sorted(list(map(int, input().split())))
+arr = list(map(int, input().split()))
 
+arr = [0] + sorted(arr)
+
+# 0에 가장 가까운 합을 구합니다.
+ans = INT_MAX
+
+# 구간을 잡아봅니다.
 j = n
-ans = 10**10
-p_sum = arr[1] + arr[n]
-if p_sum == 0:
-    print(0) 
-    exit
-
-is_possitive = True if p_sum > 0 else False
-
-for i in range (1, n+1):
-    while j > i and ((is_possitive and arr[i] + arr[j] > 0) or (not is_possitive and arr[i] + arr[j] < 0)):
+for i in range(1, n + 1):
+    if i < j:
         ans = min(ans, abs(arr[i] + arr[j]))
-        is_possitive = arr[i] + arr[j] > 0
+    
+    # 두 수의 합이 0 이하가 될 때 까지 j 구간을 내리면서 정답을 살펴봅니다.
+    while i < j - 1 and arr[i] + arr[j] > 0:
         j -= 1
+        ans = min(ans, abs(arr[i] + arr[j]))
 
-    if ans == 0:
-        break 
+# 정답을 출력합니다.
 print(ans)
