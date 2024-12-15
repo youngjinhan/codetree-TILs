@@ -14,4 +14,4 @@ for i in range(len(orders)):
     elif o == 'R':
         cur_d = (cur_d + 1) % 4
 
-print(y, x)
+print(y, -x)
